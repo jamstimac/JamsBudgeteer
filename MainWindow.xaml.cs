@@ -50,8 +50,8 @@ namespace JamsBudgeteer
             {
                 DragMove();
             }
-            catch (Exception) 
-            { 
+            catch (Exception)
+            {
                 //throw;
             }
         }
@@ -72,18 +72,31 @@ namespace JamsBudgeteer
         // Navigate to the PaymentsWindow
         private void GoToPayments(object sender, MouseButtonEventArgs e)
         {
-            var newForm = new PaymentsWindow();
-            newForm.Show();
-            this.Close();
+            try
+            {
+                var newForm = new PaymentsWindow();
+                newForm.Show();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
-
         // Navigate to the InvomeWindow
         private void GoToIncome(object sender, MouseButtonEventArgs e)
         {
-            var newForm = new IncomeWindow(); // create new form
-            newForm.Show(); // show the new form
-            this.Close(); // close current form
-
+            try
+            {
+                var newForm = new IncomeWindow(); // create new form
+                newForm.Show(); // show the new form
+                this.Close(); // close current form
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

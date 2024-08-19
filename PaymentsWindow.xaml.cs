@@ -66,18 +66,31 @@ namespace JamsBudgeteer
         // Navigate to the MainWindow
         private void GoToOverview(object sender, MouseButtonEventArgs e)
         {
-            var newForm = new MainWindow(); // create new form
-            newForm.Show(); // show the new form
-            this.Close(); // close current form
+            try
+            {
+                var newForm = new MainWindow(); // create new form
+                newForm.Show(); // show the new form
+                this.Close(); // close current form
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         // Navigate to the InvomeWindow
         private void GoToIncome(object sender, MouseButtonEventArgs e)
         {
-            var newForm = new IncomeWindow(); // create new form
-            newForm.Show(); // show the new form
-            this.Close(); // close current form
-
+            try
+            {
+                var newForm = new IncomeWindow(); // create new form
+                newForm.Show(); // show the new form
+                this.Close(); // close current form
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

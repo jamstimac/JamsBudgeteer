@@ -146,6 +146,13 @@
             <Border Grid.Row="2"
                     Background="AliceBlue"
                     ></Border>
+            <Grid Grid.Row="2">
+                <TabControl>
+                    <TabItem Header="Welcome to the Overview">
+                        
+                    </TabItem>
+                </TabControl>
+            </Grid>
 
             <!-- Footbar Objects Grid.Row="3" -->
             <Border Grid.Row="3"
